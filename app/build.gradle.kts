@@ -1,6 +1,10 @@
+import com.android.build.gradle.internal.utils.isKspPluginApplied
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
+
 }
 
 android {
@@ -47,6 +51,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
 
 dependencies {
@@ -79,5 +84,11 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.7.6")
 
     implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
+    // ROOM
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+    // soporte corrutinas
+    implementation("androidx.room:room-ktx:2.6.1")
 
 }
