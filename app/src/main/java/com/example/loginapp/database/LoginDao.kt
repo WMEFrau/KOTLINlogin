@@ -21,7 +21,7 @@ interface loginDao {
 
     suspend fun Test() {
         var solicitud = Solicitud(
-            rut =  "17.051.158-1", nombre = "Francisco Jerez", fechaNacimiento =  Date(19890119),
+            rut =  "17.051.158-1", nombre = "Francisco Jerez", fechaNacimiento = "1989-01-19",
         email =  "fran@gmail.com", telefono = "56932165487" ,  cFrontal =  "", cTrasera= "", latitud= "", longitud = ""
         )
         addSolicitud(solicitud)
